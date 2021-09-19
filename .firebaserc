@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "todo-note",
+    "production": "todo-e04e7"
+  },
+  "targets": {
+    "todo-e04e7": {
+      "hosting": {
+        "todo": [
+          "todo-note"
+        ]
+      }
+    }
+  }
+}

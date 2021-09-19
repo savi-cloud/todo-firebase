@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo app</title>
+  <script type="module" src="./app.js"></script>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div class="container mt-5">
+    
+    <div class="card" id="whenSignOut">
+      <div class="card-body border-bottom">
+        Please Login to continue
+      </div>
+      <div class="card-body text-center">
+        <button id="signInWithGoogleBtn" class="btn btn-primary">Sign in with Google</button>
+        <!-- <button id="signInWithFacebookBtn" class="btn btn-primary">Sign in with Facebook</button> -->
+      </div>
+    </div>
+
+    <div class="card" id="whenSignInTopbar" hidden="true">
+      <div class="card-body">
+        <div id="loggedInAs"></div>
+        <button id="signOutBtn" class="btn btn-secondary signOutBtn" hidden="true">Sign out</button>
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="todo-container card mt-3" id="whenSignIn"  hidden="true">
+      <div class="card-body">
+
+          <form class="row mb-5" action="javascript:void(0);">
+            <div class="col-9">
+              <input type="text" class="form-control" id="newTask" placeholder="add new task">
+            </div>
+            <div class="col text-center">
+              <button type="submit" id="addBtn" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+
+          <ul id="tasksList" class="tasksList">
+            <!-- <li>List one two three</li> -->
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+<footer class="py-2 bg-light border-top mt-auto">
+  <div class="container-fluid mb-0">
+    <div class="row">
+      <div class="col">
+        <p class="copyright-text text-center mb-0">Developed by 
+          <a href="https://www.linkedin.com/in/savina-weerasooriya" rel="noopener" target="_blank">Savina</a>
+        </p>                   
+        <p class="copyright-text text-center mb-0">Source code : 
+          <a href="https://github.com/savi-cloud" rel="noopener" target="_blank">GitHub</a></p>                   
+        </p>
+      </div>  
+    </div>
+  </div>
+</footer>
+</body>
+</html>

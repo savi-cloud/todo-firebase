@@ -12,23 +12,15 @@ import {
   deleteDoc
  } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js";
 import { getAuth ,
-    createUserWithEmailAndPassword,
     signInWithPopup,
     GoogleAuthProvider, 
     onAuthStateChanged,
     signOut
   } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
 const firebaseConfig = {
-    apiKey: "AIzaSyBfEXBOFr09QbCxOAR5mVOgb1bt-tRIEMg",
-    authDomain: "todo-e04e7.firebaseapp.com",
-    projectId: "todo-e04e7",
-    storageBucket: "todo-e04e7.appspot.com",
-    messagingSenderId: "485204955907",
-    appId: "1:485204955907:web:1e2b4c885e8b6637c84f36",
-    measurementId: "G-339RS63K3V"
+  // TODO: Add your API Key
 };
 
 // Initialize Firebase
@@ -51,21 +43,6 @@ const tasksList = document.getElementById("tasksList")
 const whenSignIn = document.getElementById("whenSignIn")
 const whenSignOut = document.getElementById("whenSignOut")
 const whenSignInTopbar = document.getElementById("whenSignInTopbar")
-
-/* TESTED & WORKING */
-// let email = "savina@me.lk"
-// let password="veryStrongPassword"
-// createUserWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     // ..
-// });
 
 signInGoogleBtn.onclick = ()=>{
   signInWithPopup(auth, new GoogleAuthProvider())
